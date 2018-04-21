@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import Form from 'components/Form/';
 import PopUp from 'components/PopUp/';
-import { walletActions } from 'ducks/wallet/';
+import { walletActions } from 'ducks/wallet';
 import {
   addressSelector,
   statusSelector,
   resultSelector,
   errorSelector,
   fetchingSelector,
-} from 'ducks/wallet/';
+} from 'ducks/wallet';
 import { connect } from 'react-redux';
 
 export class App extends Component {

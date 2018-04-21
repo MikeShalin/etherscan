@@ -100,15 +100,10 @@ export const walletActions = createActions({
  * Sagas
  **/
 
-function* requestWalletSaga(action) {
+export function* requestWalletSaga(action) {
   const { address } = action.payload,
     { fetchWallet, notValidWallet, failureWallet } = walletActions.wallet,
-    walletStatus = {
-      status: null,
-      result: null,
-    };
-
-  const wallet = yield call(getWallet, address);
+    wallet = yield call(getWallet, address);
 
   if (wallet.status === '1') yield put(fetchWallet(wallet));
   if (wallet.status === '0') yield put(notValidWallet(wallet));

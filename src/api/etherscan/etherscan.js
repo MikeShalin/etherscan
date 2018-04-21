@@ -12,7 +12,7 @@ export const getWallet = address =>
       };
     });
 
-const getResult = address =>
+export const getResult = address =>
   axios.get('https://api.etherscan.io/api', {
     params: {
       module: 'account',
