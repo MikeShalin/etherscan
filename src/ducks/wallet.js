@@ -88,7 +88,7 @@ export const fetchingSelector = createSelector(
  * */
 
 export const walletActions = createActions({
-  wallet: {
+  [prefix]: {
     REQUEST_WALLET: address => address,
     FETCH_WALLET: walletStatus => walletStatus,
     NOT_VALID_WALLET: walletStatus => walletStatus,
