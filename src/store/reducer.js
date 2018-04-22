@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import walletReducer, { moduleName as userModule } from 'ducks/wallet';
+import walletReducer, { moduleName as walletModule } from 'ducks/wallet';
 
 export default combineReducers({
-  [userModule]: walletReducer,
+  [walletModule]: walletReducer,
 });
